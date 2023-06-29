@@ -1,5 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400;1,500;1,600;1,700;1,800&family=Roboto+Slab:wght@200;300;400;500;600;700;800;900&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Bitter:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap');
 *, *:before, *:after { box-sizing: border-box; -moz-box-sizing: border-box; image-rendering: -webkit-optimize-contrast;}
 
 /*THE MINIFIED RESET*/
@@ -60,7 +60,7 @@ a{color: #fff;}
 p{text-align: justify;}
 
 .sec-title{font-size: 45px;font-weight: 600;margin-bottom: 12px;}
-.wrapper {padding: 0 10%;}
+.wrapper {width:100%; max-width:1400px; margin:0 auto; position:relative;}
 
 /*end preset*/
 
@@ -73,13 +73,17 @@ p{text-align: justify;}
 .logo h1 span{display: block;font-size: 25px;}
 .logo h1::before{content: url(/assets/images/icons-logo.png);position: absolute;top: 4px;left: -68px;}
 
-nav{}
-nav ul{}
-nav ul li{display: inline-block;}
-nav ul li a{color: #fff;font-size: 20px;margin: 0 26px;font-family: 'Montserrat', sans-serif;position: relative;}
-nav ul li a::before{content: '';width: 0;height: 4px;background: #FF0060;position: absolute;left: o;bottom: -6px;transition: 0.5s;}
-nav ul li a:hover{opacity: .6;}
-nav ul li a:hover::before {width: 100%;}
+/* main nav style */
+.main-nav{}
+.main-nav ul{}
+.main-nav ul li{display: inline-block;}
+.main-nav ul li a{color: #fff;font-size: 20px;margin: 0 26px;font-family: 'Montserrat', sans-serif;position: relative;}
+.main-nav ul li a::before{content: '';width: 0;height: 4px;background: #FF0060;position: absolute;left: o;bottom: -6px;transition: 0.5s;}
+.main-nav ul li a:hover{opacity: .6;}
+.main-nav ul li a:hover::before {width: 100%;}
+
+
+/* banner style */
 .banner{text-align: center;padding-top: 13%;line-height: 23px;}
 .banner_container{background: rgb(90, 90, 90);height: 274px;border-radius: 50px;}
 .banner_info p{font-size: 22px;margin: 0 auto;width: 69%;line-height: 26px;}
@@ -100,8 +104,7 @@ nav ul li a:hover::before {width: 100%;}
 .mid_left{flex-basis: 35%;}
 .mid_left img{width: 100%;border: 3px solid blue;border-radius: 8%;height: 480px;}
 
-.mid_right{flex-basis: 60%;/*! padding-top: 22px; */}
-/* .mid_right h2{font-size: 45px;font-weight: 600;margin-bottom: 12px;} */
+.mid_right{flex-basis: 60%;}
 .mid_right p{line-height: 24px;font-size: 20px;font-weight: 200;}
 
 /*-------------------middle 2-----------------------*/
@@ -158,11 +161,23 @@ nav ul li a:hover::before {width: 100%;}
 .btn.btn2{margin: 21px 0;display: inline-block;}
 .contact-left p i{color: #ff004f;margin-right: 15px;font-size: 25px;margin-top: 15px;}
 
+/* footer from style */
 form input, form textarea{width: 100%;border: 0;outline: none;background: #262626;padding: 15px;margin: 15px 0;color: #fff;font-size: 18px; border-radius: 6px;}
 .name-input{margin: 0;}
-
 form .btn-submit{display: block;margin: 40px 0;width: fit-content;border: 1px solid #FF0060;padding: 14px 50px;border-radius: 6px;text-decoration: none;color: #fff;transition: 0.5s;background: #080808;}
 form .btn-submit:hover{background: #ff004f;}
 
-.copyright{width: 100%;text-align: center;padding: 25px 0;background: #262626;font-weight: 300;margin-top: 20px;}
+/* footer nav style */
+.footer-nav{background: #262626;}
+.footer-nav ul{text-align: center;padding-top: 25px;}
+.footer-nav ul li{display: inline-block;}
+.footer-nav ul li a{color: #fff;font-size: 20px;margin: 0 26px;font-family: 'Montserrat', sans-serif;position: relative;}
+.footer-nav ul li a::before{content: '';width: 0;height: 4px;background: #fff;position: absolute;left: o;bottom: -6px;transition: 0.5s;}
+.footer-nav ul li a:hover{color: #ff004f; }
+.footer-nav ul li a:hover::before{width: 100%;}
+
+
+/* footer copyright section style */
+
+.copyright{width: 100%;text-align: center;font-weight: 300;padding: 20px 0;}
 .copyright p{text-align: center;}
